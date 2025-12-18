@@ -10,6 +10,12 @@ Clone the repo and install dependencies:
 npm install
 ```
 
+Build repo:
+
+```bash
+npm run build
+```
+
 Run the development server:
 
 ```bash

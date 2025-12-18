@@ -10,8 +10,7 @@ export const userSchema = z.object({
 
   age: z
     .number({
-      required_error: 'Enter your age',
-      invalid_type_error: 'Age must be a number',
+      message: 'Age must be a number',
     })
     .int('Age must be a whole number')
     .min(MIN_AGE, `You must be at least ${MIN_AGE} years old`)

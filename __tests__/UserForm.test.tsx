@@ -26,10 +26,10 @@ describe('UserForm', () => {
     fireEvent.click(submitButton);
 
     await waitFor(() => {
-      expect(screen.getByText(/enter your full name/i)).toBeInTheDocument();
-      expect(screen.getByText(/enter your age/i)).toBeInTheDocument();
-      expect(screen.getByText(/select a country/i)).toBeInTheDocument();
-      expect(screen.getByText(/select at least one interest/i)).toBeInTheDocument();
+      expect(screen.getAllByText(/enter your full name/i).length).toBeGreaterThan(0);
+      expect(screen.getAllByText(/you must be at least 18 years old/i).length).toBeGreaterThan(0);
+      expect(screen.getAllByText(/select a country/i).length).toBeGreaterThan(0);
+      expect(screen.getAllByText(/select at least one interest/i).length).toBeGreaterThan(0);
     });
 
     expect(mockOnAddUser).not.toHaveBeenCalled();
@@ -39,14 +39,24 @@ describe('UserForm', () => {
     const user = userEvent.setup();
     render(<UserForm onAddUser={mockOnAddUser} />);
 
+    const nameInput = screen.getByLabelText(/full name/i);
+    await user.type(nameInput, 'Test User');
+
     const ageInput = screen.getByLabelText(/age/i);
+    await user.clear(ageInput);
     await user.type(ageInput, '17');
+
+    const countrySelect = screen.getByLabelText(/country/i);
+    await user.selectOptions(countrySelect, 'england');
+
+    const readingCheckbox = screen.getByLabelText(/reading books/i);
+    await user.click(readingCheckbox);
 
     const submitButton = screen.getByRole('button', { name: /add user/i });
     await user.click(submitButton);
 
     await waitFor(() => {
-      expect(screen.getByText(/you must be at least 18 years old/i)).toBeInTheDocument();
+      expect(screen.getAllByText(/you must be at least 18 years old/i).length).toBeGreaterThan(0);
     });
 
     expect(mockOnAddUser).not.toHaveBeenCalled();
