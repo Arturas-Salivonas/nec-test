@@ -1,0 +1,630 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "GDS Transport", arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.nec-template {
+  background-color: #f3f2f1;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+.nec-template__body {
+  margin: 0;
+  background-color: #ffffff;
+}
+
+/* Typography */
+.nec-heading-xl {
+  color: #0b0c0c;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 1.09375;
+  margin-top: 0;
+  margin-bottom: 30px;
+}
+
+.nec-heading-l {
+  color: #0b0c0c;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.11111111;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.nec-heading-m {
+  color: #0b0c0c;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.25;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+.nec-body,
+.nec-body-l {
+  color: #0b0c0c;
+  font-size: 19px;
+  line-height: 1.47368421;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.nec-body-l {
+  font-size: 24px;
+  line-height: 1.25;
+}
+
+/* Skip link */
+.nec-skip-link {
+  position: absolute;
+  left: -9999em;
+  color: #0b0c0c;
+  background-color: #ffdd00;
+  padding: 10px 15px;
+  text-decoration: underline;
+}
+
+.nec-skip-link:focus {
+  left: 0;
+  z-index: 9999;
+}
+
+/* Header */
+.nec-header {
+  font-family: "GDS Transport", arial, sans-serif;
+  background-color: #0b0c0c;
+  border-bottom: 10px solid #1d70b8;
+  color: #ffffff;
+}
+
+.nec-header__container {
+  position: relative;
+  margin-bottom: -10px;
+  padding-top: 10px;
+  border-bottom: 10px solid #1d70b8;
+}
+
+.nec-header__link--service-name {
+  display: inline-block;
+  font-size: 24px;
+  font-weight: 700;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 10px 0;
+}
+
+/* Width container */
+.nec-width-container {
+  max-width: 960px;
+  margin-right: 15px;
+  margin-left: 15px;
+}
+
+@media (min-width: 1020px) {
+  .nec-width-container {
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+/* Main wrapper */
+.nec-main-wrapper {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+@media (min-width: 768px) {
+  .nec-main-wrapper {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
+
+/* Grid */
+.nec-grid-row {
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+.nec-grid-row::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.nec-grid-column-two-thirds {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0 15px;
+}
+
+@media (min-width: 768px) {
+  .nec-grid-column-two-thirds {
+    width: 66.6666%;
+    float: left;
+  }
+}
+
+.nec-grid-column-full {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0 15px;
+}
+
+/* Form elements */
+.nec-form-group {
+  margin-bottom: 20px;
+}
+
+.nec-form-group--error {
+  padding-left: 15px;
+  border-left: 5px solid #d4351c;
+}
+
+.nec-label {
+  color: #0b0c0c;
+  font-size: 19px;
+  line-height: 1.25;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.nec-label--m {
+  font-weight: 700;
+  font-size: 19px;
+  line-height: 1.31579;
+}
+
+.nec-hint {
+  font-size: 19px;
+  line-height: 1.25;
+  color: #505a5f;
+  margin-bottom: 10px;
+}
+
+.nec-input {
+  font-family: "GDS Transport", arial, sans-serif;
+  font-size: 19px;
+  line-height: 1.25;
+  box-sizing: border-box;
+  width: 100%;
+  height: 40px;
+  padding: 5px;
+  border: 2px solid #0b0c0c;
+  border-radius: 0;
+}
+
+.nec-input:focus {
+  outline: 3px solid #ffdd00;
+  outline-offset: 0;
+  box-shadow: inset 0 0 0 2px;
+}
+
+.nec-input--error {
+  border: 4px solid #d4351c;
+}
+
+.nec-input--width-5 {
+  max-width: 5.4em;
+}
+
+.nec-select {
+  font-family: "GDS Transport", arial, sans-serif;
+  font-size: 19px;
+  line-height: 1.25;
+  box-sizing: border-box;
+  max-width: 100%;
+  height: 40px;
+  padding: 5px;
+  border: 2px solid #0b0c0c;
+  border-radius: 0;
+}
+
+.nec-select:focus {
+  outline: 3px solid #ffdd00;
+  outline-offset: 0;
+  box-shadow: inset 0 0 0 2px;
+}
+
+.nec-select--error {
+  border: 4px solid #d4351c;
+}
+
+/* Fieldset */
+.nec-fieldset {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.nec-fieldset__legend {
+  color: #0b0c0c;
+  font-size: 19px;
+  line-height: 1.25;
+  margin-bottom: 10px;
+}
+
+.nec-fieldset__legend--m {
+  font-size: 24px;
+  line-height: 1.25;
+  font-weight: 700;
+}
+
+.nec-fieldset__heading {
+  margin: 0;
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/* Checkboxes */
+.nec-checkboxes {
+  margin-bottom: 15px;
+}
+
+.nec-checkboxes__item {
+  display: block;
+  position: relative;
+  min-height: 40px;
+  margin-bottom: 10px;
+  padding-left: 40px;
+  clear: left;
+}
+
+.nec-checkboxes__input {
+  cursor: pointer;
+  position: absolute;
+  z-index: 1;
+  top: -2px;
+  left: -2px;
+  width: 44px;
+  height: 44px;
+  margin: 0;
+  opacity: 0;
+}
+
+.nec-checkboxes__label {
+  display: inline-block;
+  margin-bottom: 0;
+  padding: 8px 15px 5px;
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
+.nec-checkboxes__label::before {
+  content: "";
+  box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 40px;
+  border: 2px solid currentcolor;
+  background: transparent;
+}
+
+.nec-checkboxes__input:checked + .nec-checkboxes__label::after {
+  content: "";
+  position: absolute;
+  top: 11px;
+  left: 9px;
+  width: 23px;
+  height: 12px;
+  transform: rotate(-45deg);
+  border: solid;
+  border-width: 0 0 5px 5px;
+  border-top-color: transparent;
+  box-sizing: border-box;
+  background: transparent;
+}
+
+.nec-checkboxes__input:focus + .nec-checkboxes__label::before {
+  box-shadow: 0 0 0 3px #ffdd00;
+}
+
+/* Button */
+.nec-button {
+  font-family: "GDS Transport", arial, sans-serif;
+  font-weight: 400;
+  font-size: 19px;
+  line-height: 1;
+  box-sizing: border-box;
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  margin-top: 0;
+  margin-bottom: 22px;
+  padding: 8px 10px 7px;
+  border: 2px solid transparent;
+  border-radius: 0;
+  color: #fff;
+  background-color: #00703c;
+  text-align: center;
+  vertical-align: top;
+  cursor: pointer;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+@media (min-width: 768px) {
+  .nec-button {
+    width: auto;
+  }
+}
+
+.nec-button:hover {
+  background-color: #005a30;
+}
+
+.nec-button:focus {
+  outline: 3px solid #ffdd00;
+  outline-offset: 0;
+  box-shadow: inset 0 0 0 1px #0b0c0c;
+  background-color: #00703c;
+}
+
+/* Error message */
+.nec-error-message {
+  font-size: 19px;
+  line-height: 1.25;
+  font-weight: 700;
+  color: #d4351c;
+  display: block;
+  margin-bottom: 15px;
+  clear: both;
+  padding-top: 4px;
+}
+
+.nec-visually-hidden {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+  clip: rect(0 0 0 0) !important;
+  -webkit-clip-path: inset(50%) !important;
+  clip-path: inset(50%) !important;
+  border: 0 !important;
+  white-space: nowrap !important;
+}
+
+/* Error summary */
+.nec-error-summary {
+  color: #0b0c0c;
+  padding: 15px;
+  margin-bottom: 30px;
+  border: 5px solid #d4351c;
+}
+
+.nec-error-summary:focus {
+  outline: 3px solid #ffdd00;
+  outline-offset: 0;
+}
+
+.nec-error-summary__title {
+  color: #0b0c0c;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.25;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+.nec-error-summary__body {
+  font-size: 19px;
+  line-height: 1.25;
+}
+
+.nec-list {
+  font-size: 19px;
+  line-height: 1.25;
+  color: #0b0c0c;
+  margin-top: 0;
+  margin-bottom: 20px;
+  padding-left: 0;
+  list-style-type: none;
+}
+
+.nec-error-summary__list {
+  margin-bottom: 0;
+}
+
+.nec-error-summary__list a {
+  font-weight: 700;
+  color: #d4351c;
+  text-decoration: underline;
+}
+
+.nec-error-summary__list a:hover {
+  color: #942514;
+}
+
+/* Notification banner */
+.nec-notification-banner {
+  font-family: "GDS Transport", arial, sans-serif;
+  margin-bottom: 30px;
+  border: 5px solid #1d70b8;
+  background-color: #1d70b8;
+}
+
+.nec-notification-banner--success {
+  border-color: #00703c;
+  background-color: #00703c;
+}
+
+.nec-notification-banner:focus {
+  outline: 3px solid #ffdd00;
+  outline-offset: 0;
+}
+
+.nec-notification-banner__header {
+  padding: 10px 15px 10px 15px;
+}
+
+.nec-notification-banner__title {
+  margin: 0;
+  font-size: 19px;
+  line-height: 1.25;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.nec-notification-banner__content {
+  color: #0b0c0c;
+  padding: 15px;
+  background-color: #ffffff;
+}
+
+.nec-notification-banner__heading {
+  margin: 0 0 15px 0;
+  font-size: 19px;
+  line-height: 1.25;
+  font-weight: 700;
+}
+
+/* Inset text */
+.nec-inset-text {
+  font-size: 19px;
+  line-height: 1.25;
+  color: #0b0c0c;
+  padding: 15px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-left: 10px solid #b1b4b6;
+}
+
+/* Table */
+.nec-table {
+  font-size: 19px;
+  line-height: 1.25;
+  color: #0b0c0c;
+  width: 100%;
+  margin-bottom: 30px;
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+.nec-table__caption {
+  font-weight: 700;
+  display: table-caption;
+  text-align: left;
+}
+
+.nec-table__head {
+  font-weight: 700;
+}
+
+.nec-table__header {
+  font-weight: 700;
+  text-align: left;
+  vertical-align: top;
+  padding: 10px 20px 10px 0;
+  border-bottom: 1px solid #b1b4b6;
+}
+
+.nec-table__cell {
+  padding: 10px 20px 10px 0;
+  border-bottom: 1px solid #b1b4b6;
+  text-align: left;
+  vertical-align: top;
+}
+
+.nec-table__cell .nec-list {
+  margin-bottom: 0;
+}
+
+.nec-table__cell .nec-list li {
+  margin-bottom: 5px;
+}
+
+/* Footer */
+.nec-footer {
+  font-family: "GDS Transport", arial, sans-serif;
+  background-color: #f3f2f1;
+  border-top: 1px solid #b1b4b6;
+  padding-top: 25px;
+  padding-bottom: 15px;
+}
+
+.nec-footer__meta {
+  display: flex;
+  margin-right: -15px;
+  margin-left: -15px;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+
+
+.nec-footer__inline-list {
+  margin-top: 0;
+  margin-bottom: 15px;
+  padding: 0;
+  list-style: none;
+}
+
+.nec-footer__inline-list-item {
+  display: inline-block;
+  margin-right: 15px;
+  margin-bottom: 5px;
+}
+
+.nec-footer__link {
+  font-size: 16px;
+  line-height: 1.25;
+  color: #0b0c0c;
+  text-decoration: underline;
+}
+
+.nec-footer__link:hover {
+  color: #0b0c0c;
+  text-decoration: underline;
+}
+
+.nec-footer__licence-logo {
+  display: inline-block;
+  margin-right: 10px;
+  vertical-align: top;
+  forced-color-adjust: auto;
+}
+
+.nec-footer__licence-description {
+  display: inline-block;
+  font-size: 16px;
+  line-height: 1.25;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.nec-footer__copyright-logo {
+  display: inline-block;
+  min-width: 125px;
+  padding-top: 112px;
+  background-image: url("https://assets.publishing.service.NEC/static/nec-crest-2x-c6548884b516041752fc4156a50f084ca387b1e37e4f4ff51b123702a65d31b6.png");
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  background-size: 125px 102px;
+  text-align: center;
+  white-space: nowrap;
+  font-size: 16px;
+  line-height: 1.25;
+}
+
+/* Focus styles */
+a:focus {
+  outline: 3px solid #ffdd00;
+  outline-offset: 0;
+  background-color: #ffdd00;
+  color: #0b0c0c;
+  text-decoration: none;
+}
